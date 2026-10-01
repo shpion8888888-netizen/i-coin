@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I-coin — обмен криптовалют в Перми</title>
+<meta name="description" content="I-coin — криптообменник в Перми: обмен криптовалют на наличные рубли и обратно. ул. Революции, 20.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F0FB; --surface:#FFFFFF; --ink:#1A1633; --muted:#5A5575; --violet:#5B3DF5; --lime:#C8F169; --on-violet:#FFFFFF; --line:#D9D3EE;
+  --f:'Manrope','Segoe UI',Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13102A;--surface:#1D1940;--ink:#F1EEFF;--muted:#A9A3CC;--violet:#7C63FF;--line:#352F63}}
+:root[data-theme="dark"]{--bg:#13102A;--surface:#1D1940;--ink:#F1EEFF;--muted:#A9A3CC;--violet:#7C63FF;--line:#352F63}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none}
+.logo span{color:var(--violet)}
+.tel{font-weight:600;text-decoration:none;background:var(--lime);color:#1A1633;padding:8px 16px;border-radius:999px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:40px 0 72px}
+h1{font-weight:800;font-size:clamp(34px,6vw,64px);line-height:1.02;letter-spacing:-.045em;margin:0 0 20px}
+.lead{max-width:46ch;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:15px 26px;border-radius:14px;font-weight:600;text-decoration:none;border:2px solid var(--violet);transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.main{background:var(--violet);color:var(--on-violet)}
+.btn.alt{color:var(--ink);border-color:var(--ink)}
+.coin{justify-self:center;width:min(300px,70vw);aspect-ratio:1;border-radius:50%;background:var(--violet);display:grid;place-items:center;position:relative;box-shadow:0 0 0 14px var(--lime),0 0 0 15px var(--ink)}
+.coin::before{content:"";position:absolute;inset:18px;border-radius:50%;border:3px dashed rgba(255,255,255,.55)}
+.coin b{font-weight:800;font-size:clamp(110px,22vw,170px);line-height:1;color:#fff;letter-spacing:-.06em}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-weight:800;font-size:clamp(26px,4vw,38px);line-height:1.1;letter-spacing:-.035em;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h3{font-weight:800;font-size:19px;margin:0 0 8px;letter-spacing:-.02em}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:18px;max-width:620px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:12px;background:var(--lime);color:#1A1633;display:grid;place-items:center;font-weight:800}
+.steps b{display:block}
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:12px 28px;margin:0}
+dt{color:var(--muted)}dd{margin:0;font-weight:600}
+.cta{background:var(--violet);color:#fff;border-radius:24px;padding:32px}
+.cta h3{font-weight:800;font-size:24px;line-height:1.2;margin:0 0 10px;letter-spacing:-.03em}
+.cta p{margin:0 0 20px;opacity:.9}
+.cta .btn{background:var(--lime);color:#1A1633;border-color:var(--lime)}
+footer{padding:28px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:820px){.hero,.contacts{grid-template-columns:1fr}.coin{order:-1;margin:12px 0 8px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">I<span>-</span>coin</a>
+    <a class="tel" href="tel:+79051075765">+7 905 107-57-65</a>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Криптообменник в центре Перми</h1>
+        <p class="lead">Меняем криптовалюту на наличные рубли и обратно. Понятный курс, быстрая сделка, личная встреча в офисе.</p>
+        <div class="btns">
+          <a class="btn main" href="tel:+79051075765">Позвонить</a>
+          <a class="btn alt" href="https://t.me/I_coin_obmen" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+      </div>
+      <div class="coin" role="img" aria-label="Логотип I-coin"><b>I</b></div>
+    </div>
+
+    <section id="services">
+      <h2>Чем мы занимаемся</h2>
+      <div class="grid">
+        <div class="card"><h3>Покупка криптовалюты</h3><p>Приобретайте криптовалюту за наличные рубли.</p></div>
+        <div class="card"><h3>Продажа криптовалюты</h3><p>Обменяйте цифровые активы на наличные в офисе.</p></div>
+        <div class="card"><h3>Обмен по запросу</h3><p>Напишите нужное направление и сумму — назовём курс и условия.</p></div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>Как проходит обмен</h2>
+      <ol class="steps">
+        <li><div><b>Напишите или позвоните</b>Укажите направление и сумму обмена.</div></li>
+        <li><div><b>Подтвердите курс</b>Согласуем курс и время визита до начала сделки.</div></li>
+        <li><div><b>Приходите в офис</b>Проведём обмен по адресу ул. Революции, 20.</div></li>
+      </ol>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <div class="contacts">
+        <dl>
+          <dt>Адрес</dt><dd>Пермь, ул. Революции, 20</dd>
+          <dt>Телефон</dt><dd><a href="tel:+79051075765">+7 905 107-57-65</a></dd>
+          <dt>Telegram</dt><dd><a href="https://t.me/I_coin_obmen" target="_blank" rel="noopener">@I_coin_obmen</a></dd>
+        </dl>
+        <div class="cta">
+          <h3>Узнайте актуальный курс</h3>
+          <p>Курс зависит от направления и суммы — напишите нам, и мы ответим быстро.</p>
+          <a class="btn" href="https://t.me/I_coin_obmen" target="_blank" rel="noopener">Спросить в Telegram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© I-coin, Пермь. Информация на сайте не является публичной офертой; актуальный курс уточняйте у менеджера.</footer>
+</div>
+</body>
+</html>
